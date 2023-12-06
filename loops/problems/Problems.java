@@ -1,4 +1,4 @@
-package loops.practice;
+package loops.problems;
 
 public class Problems {
     public static void main(String[] args) {
