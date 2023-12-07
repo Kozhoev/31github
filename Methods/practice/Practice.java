@@ -3,8 +3,10 @@ package Methods.practice;
 public class Practice {
     public static void main(String[] args) {
         practice(args);
+        Student joe = new Student("Joe");
+        Student jack = new Student("Jack");
         Practice a = new Practice();
-        a.bar(2,3);
+        a.bar(joe,jack);
     }
     public static void foo() {
         System.out.println("print this");
@@ -13,8 +15,18 @@ public class Practice {
         foo();
     }
 
-    public void bar(int num1, int num2){
-        int result = num1+num2;
-        System.out.println(result);
+    public void bar(Student s1, Student s2){
+        System.out.println(s1.getName()+' ' +s2.getName());
+    }
+}
+
+class Student{
+    private String name;
+    public Student(String name) {
+        this.name = name;
+    }
+
+    public String getName(){
+        return name;
     }
 }
