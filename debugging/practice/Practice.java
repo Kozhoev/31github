@@ -10,7 +10,13 @@ public class Practice {
     }
 
     private static int divide(int a, int b) {
-        // Deliberate mistake to cause an ArithmeticException
-        return a / b;
+        if (b != 0) {
+            return a / b;
+        } else {
+            System.out.println("Cannot divide by zero!");
+            return 0;  // or handle it in a way that makes sense for your application
+        }
     }
+
 }
+
