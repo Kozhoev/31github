@@ -26,6 +26,9 @@ public class Objects {
 
         Point k = p.new Point();
 
+        Point n = p.new Point(3,3);
+        Point m = p.new Point(1,9);
+
         System.out.println("Coordinates of myPoint:");
         k.printPoint();
 
@@ -33,5 +36,9 @@ public class Objects {
 
         System.out.println("Coordinates of customPoint:");
         customPoint.printPoint();
+
+        Point centerPoint = n.center(m);
+        System.out.println("Center point between point1 and point2:");
+        centerPoint.printPoint();
     }
 }
