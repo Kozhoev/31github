@@ -2,8 +2,7 @@ package DataTypes;
 
 public class DataType {
     public static void main(String[] args) {
-        boolean b = false;
-        b = true;
+        boolean b = true;
 
         boolean toBe = false;
         b = toBe || !toBe;
@@ -12,15 +11,15 @@ public class DataType {
         }
 
         int children = 0;
-        b = children; // Will not work
-        if (children) { // Will not work
-            // Will not work
+        // Fix the condition in the if statement
+        if (children > 0) {
+            // Code to execute if children is greater than 0
         }
 
         int a;
-        boolean b = true;
-        boolean c = false;
-        a = b + c;            //The following line will give an error
+        boolean c = false; // Different variable name
+        a = b ? 1 : 0;     // Use ternary operator or any other logical operation
         System.out.println(a);
     }
 }
+
