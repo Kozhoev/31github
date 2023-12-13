@@ -1,4 +1,4 @@
-package leedcode.problem2;
+package leedcode.problem53;
 
 public class MaximumSubarray {
     public int maxSubArray(int[] nums) {
