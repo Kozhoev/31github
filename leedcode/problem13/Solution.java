@@ -1,29 +1,75 @@
 package leedcode.problem13;
 import java.util.HashMap;
 import java.util.Map;
-
 class Solution {
     public int romanToInt(String s) {
-        Map<Character, Integer> m = new HashMap<>();
-
-        m.put('I', 1);
-        m.put('V', 5);
-        m.put('X', 10);
-        m.put('L', 50);
-        m.put('C', 100);
-        m.put('D', 500);
-        m.put('M', 1000);
-
-        int ans = 0;
-
-        for (int i = 0; i < s.length(); i++) {
-            if (i < s.length() - 1 && m.get(s.charAt(i)) < m.get(s.charAt(i + 1))) {
-                ans -= m.get(s.charAt(i));
-            } else {
-                ans += m.get(s.charAt(i));
+        int n = s.length();
+        int ans=0;
+        for(int i = 0 ; i<n;i++)
+        {
+            if(s.charAt(i)=='C')
+            {
+                if(i<n-1 && s.charAt(i+1)=='M')
+                {
+                    ans+=900;
+                    i++;
+                }
+                else if(i<n-1 && s.charAt(i+1)=='D')
+                {
+                    ans+=400;
+                    i++;
+                }
+                else
+                {
+                    ans+=100;}
+            }
+            else if(s.charAt(i)=='X')
+            {
+                if(i<n-1 && s.charAt(i+1)=='C')
+                {
+                    ans+=90;
+                    i++;
+                }
+                else if(i<n-1 && s.charAt(i+1)=='L')
+                {
+                    ans+=40;
+                    i++;
+                }
+                else
+                {ans+=10;}
+            }
+            else if(s.charAt(i)=='I')
+            {
+                if(i<n-1 && s.charAt(i+1)=='X')
+                {
+                    ans+=9;
+                    i++;
+                }
+                else if(i<n-1 && s.charAt(i+1)=='V')
+                {
+                    ans+=4;
+                    i++;
+                }
+                else
+                {ans+=1;}
+            }
+            else if(s.charAt(i)=='V')
+            {
+                ans+=5;
+            }
+            else if(s.charAt(i)=='L')
+            {
+                ans+=50;
+            }
+            else if(s.charAt(i)=='D')
+            {
+                ans+=500;
+            }
+            else if(s.charAt(i)=='M')
+            {
+                ans+=1000;
             }
         }
-
         return ans;
     }
 }
