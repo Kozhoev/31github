@@ -11,6 +11,8 @@ public class Solution {
 
         return Arrays.equals(sChars, tChars);
     }
-
-
+    public static void main(String[] args) {
+        System.out.println(isAnagram("listen", "silent")); // Output: true
+        System.out.println(isAnagram("hello", "world"));   // Output: false
+    }
 }
