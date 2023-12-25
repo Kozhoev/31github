@@ -16,5 +16,19 @@ class Solution {
             }
         return -1;
     }
+    public static void main(String[] args) {
+        Solution solution = new Solution();
 
+        String input1 = "leetcode";
+        String input2 = "loveleetcode";
+        String input3 = "abcabc";
+
+        int result1 = solution.firstUniqChar(input1);
+        int result2 = solution.firstUniqChar(input2);
+        int result3 = solution.firstUniqChar(input3);
+
+        System.out.println("Result 1: " + result1); // Output should be 0
+        System.out.println("Result 2: " + result2); // Output should be 2
+        System.out.println("Result 3: " + result3); // Output should be -1
+    }
 }
