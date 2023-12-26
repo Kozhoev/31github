@@ -25,5 +25,19 @@ class Solution {
 
         return result;
     }
+    public static void main(String[] args) {
+            Solution solution = new Solution();
+            int[] nums1 = {1, 2, 2, 1};
+            int[] nums2 = {2, 2};
+
+            int[] result = solution.intersect(nums1, nums2);
+
+            System.out.print("Intersection: ");
+            for (int num : result) {
+                System.out.print(num + " ");
+            }
+    }
 }
+
+
 
